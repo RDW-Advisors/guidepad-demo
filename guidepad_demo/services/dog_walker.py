@@ -2,10 +2,12 @@ import time
 from datetime import datetime
 
 from guidepad.service.base_service import Service
-from guidepad.types import registry
+from guidepad.types import attributes, registry
 
 
 class DogWalker(Service):
+
+    service_type = attributes.String(default='guidepad_demo.dog_walker')
 
     def start(self, done_signal):
         while True:
