@@ -9,6 +9,7 @@ from guidepad.types import attributes, base_type
 class Dog(Service):
 
     bladder_level = attributes.Int(default=0, maximum=100)
+    service_type = attributes.String(default='guidepad_demo.dog')
 
     def start(self, done_signal):
         while True:
