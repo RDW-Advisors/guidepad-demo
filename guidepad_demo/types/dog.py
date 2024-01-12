@@ -8,6 +8,9 @@ from guidepad.types import attributes, base_type
 
 class Dog(Service):
 
+    class TypeConfig:
+        instancestore_name = 'service'
+
     bladder_level = attributes.Int(default=0, maximum=100)
     service_type = attributes.String(default='guidepad_demo.dog')
 
